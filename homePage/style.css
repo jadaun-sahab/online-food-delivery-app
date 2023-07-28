@@ -1,0 +1,116 @@
+*{
+    
+   font-family: 'Sigmar', cursive;
+}
+
+#nav{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav img{
+    width: 150px;
+}
+#nav button{
+    border: none;
+    padding:10px 20px;
+    border-radius: 10px;
+    margin:20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+#nav input{
+    border: black;
+    padding:10px 20px;
+    border-radius: 10px;
+    margin:20px;
+    background-color: rgb(40, 37, 37);
+    color: white;
+    font-weight: 600;
+}
+#homeImg img{
+    width: 1900px;
+    height: 800px;
+}
+#cards{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px;
+    text-align: center;
+}
+#cards img{
+    width: 300px;
+    height:300px;
+}
+
+#cards p{
+   font-weight: 600;
+   font-size: larger;
+}
+#footer{
+    width: 100%;
+    height: 760px;
+    padding: 10px;
+
+    color: white;
+    background-color: black;
+}#footer1{
+    width:100%;
+    height: 150px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}#footer1>div{
+    width:15%;
+   
+    
+}
+#footerr1{
+width:100%;
+height: 350px;
+margin: 20px;
+display: flex;
+justify-content: center;
+
+}#footerr1>div{
+width:15%;
+
+
+}ul{
+list-style-type: none;
+font-weight: 500;
+}#singup{
+background-color: black;
+color: white;
+border-radius: 20px;
+border: 1px solid white;
+margin: 10px;
+padding: 5px 10px 5px 10px;
+}
+hr{
+margin-top: 24px;
+margin-bottom: 24px;
+border-bottom: 1px solid rgb(102, 102, 102);
+width: 90%;
+}
+#last-line{
+margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

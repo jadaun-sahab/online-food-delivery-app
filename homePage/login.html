@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+    <style>
+      .size{
+            width: 368px;
+        } input{
+            margin: 8px;
+            padding: 8px;
+            border: 1px solid grey;
+        }#join{
+            padding: 5px 25px 5px 25px;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }.popup{
+           width: 450px;
+           height: 250px;
+           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+           margin: auto;
+           align-items: center;
+           padding: 30px;
+
+        }
+        .form>h2{
+            text-align: center;
+            margin: 10px 0px 20px;
+        }.form>.form-elements{
+            display: block;
+            
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+        
+    <div class="popup">
+        <div class="form">
+            <h2>Log In</h2>
+
+            <div class="form-elements">
+                
+                <input type="number" id="phone" placeholder="Mobile Number" class="size">
+                <br>
+                <input type="password" id="password" class="size" placeholder="Password (8 to 20 characters)">
+                <br>
+                
+        
+        <button onclick="login()"id="join">Log In</button>
+            </div>
+           
+        
+      
+    </div>
+    
+</div>
+
+
+</html>
+<script>
+    document.querySelector(".popup").classList.add("active");
+
+    function login(){
+
+        let pn=document.getElementById("phone").value;
+    let pass=document.getElementById("password").value;
+    
+    fetch("http://localhost:8088//login/customer/login", {
+
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        },
+        body: JSON.stringify({
+            "phone": pn,
+            "password": pass
+        })
+    }).then(response => {
+        if(response.status == 201 | response.status == 200){
+            response.json().then(data => {
+                alert("Loggedin Succesfully")
+            });
+        }else{
+            response.json().then(data => alert(data.message));
+        }
+    })
+
+
+}
+   
+
+    
+
+   
+</script>
